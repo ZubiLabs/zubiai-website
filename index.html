@@ -3,81 +3,132 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Zubi - The Open-Source Core of Autonomous Assistance</title>
+    <title>Individ</title>
     <style>
+        @font-face {
+            font-family: 'Poiret One';
+            src: url('./fonts/PoiretOne-Regular.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
         body {
             display: flex;
             flex-direction: column;
-            align-items: center;
             justify-content: center;
+            align-items: center;
             height: 100vh;
             margin: 0;
             background-color: #ffffff;
-            color: #000000;
+            color: #999999; /* Updated text color */
             font-family: Arial, sans-serif;
             text-align: center;
         }
         h1 {
-            font-size: 2.5rem;
+            font-size: 8rem;
             margin: 0.5rem 0;
+            font-family: 'Poiret One', sans-serif; /* Applied Poiret One font */
+            /* Added gradient to header */
+            background: linear-gradient(to top, #ffffff, #fefefe, #eeeeee, #dddddd, #cccccc);
+            -webkit-background-clip: text;
+            color: transparent;
         }
         p {
-            font-size: 1.2rem;
-            max-width: 700px;
+            font-size: 1rem;
+            max-width: 600px;
             margin: 0.5rem 0;
+            color: #dddddd;
+            text-transform: uppercase;
         }
-        .cta-button {
-            padding: 0.7rem 1.5rem;
-            margin-top: 1.5rem;
-            border: none;
-            background-color: #000000;
-            color: #ffffff;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: background-color 0.3s;
+
+        /* Base styles for the badge */
+        .powered-by-badge {
+          position: fixed;
+          bottom: 25px; /* Distance from the bottom of the screen */
+          left: 50%;    /* Start in the middle of the screen */
+          transform: translateX(-50%); /* Center align */
+          z-index: 1000; /* Ensure it stays above other elements */
+          display: inline-flex;
+          align-items: center;
+          justify-content: center;
+          font-family: Arial, sans-serif;
+          font-size: 14px;
+          background: linear-gradient(135deg, #f0f0f0, #e0e0e0);
+          border-radius: 20px;
+          padding: 5px 10px;
+          box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+          border: 1px solid #d0d0d0;
+          color: #555;
+          transition: all 0.3s ease;
+          cursor: pointer;
+          opacity: 0.35; /* transparency */
         }
-        .cta-button:hover {
-            background-color: #333333;
+        
+        /* Text and ZubiAI logo styles */
+        .powered-by-badge span {
+          margin-right: 5px;
+          font-weight: 300;
         }
-        .roadmap, .community {
-            margin-top: 2rem;
-            max-width: 700px;
-            font-size: 1rem;
-            color: #666666;
+        
+        .powered-by-badge span.ai {
+          margin-left: 2px;
         }
-        .link {
-            color: #0000ee;
-            text-decoration: none;
+        
+        .powered-by-badge strong {
+          font-weight: 600;
+          color: #333;
         }
-        .link:hover {
-            text-decoration: underline;
+        
+        .powered-by-badge strong .ai {
+          color: #0073e6; /* Highlighted 'AI' part */
+          font-weight: bold;
+        }
+        
+        /* Hover effect */
+        .powered-by-badge:hover {
+          background: linear-gradient(135deg, #e6f7ff, #cceeff);
+          color: #0073e6;
+          border-color: #0073e6;
+          box-shadow: 0 4px 10px rgba(0, 115, 230, 0.2);
+          opacity: 0.50; /* transparency */
+        }
+        
+        .powered-by-badge:hover strong {
+          color: #005bb5;
+        }
+        
+        .powered-by-badge:hover strong .ai {
+          color: #003d80;
+        }
+        
+        /* Responsive font size for h1 */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 5rem;
+            }
+            p {
+                font-size: 0.8rem;
+                max-width: 460px;
+            }
+        }
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 3rem;
+            }
+            p {
+                font-size: 0.7rem;
+                max-width: 400px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <h1>Zubi</h1>
-    <p>The open-source core of autonomous assistance, where autonomy meets collaboration.</p>
-    <p>Building the foundation for systems that understand, adapt, and act.</p>
+    <h1>zubiAI</h1>
+    <p>Autonomous starts here.</p>
 
-    <a href="https://github.com/yourusername/zubi" class="cta-button">Explore the Code on GitHub</a>
-
-    <div class="roadmap">
-        <h2>🚀 Project Roadmap</h2>
-        <p>Next up on Zubi’s journey:</p>
-        <ul>
-            <li>Autonomous scheduling and task prioritization modules</li>
-            <li>Enhanced adaptability for individual preferences</li>
-            <li>API integration for broader connectivity</li>
-        </ul>
-        <p>Stay tuned as Zubi evolves with each contribution.</p>
+    <div class="powered-by-badge">
+      <span>Powered by</span>
+      <strong>zubi<span class="ai">AI</span></strong>
     </div>
-
-    <div class="community">
-        <h2>🤝 Join the Community</h2>
-        <p>Your ideas shape Zubi. Contribute, explore, and discuss on <a href="https://github.com/yourusername/zubi/issues" class="link">GitHub Issues</a>.</p>
-        <p>Follow along as we create a future where technology truly works for us.</p>
-    </div>
-
 </body>
 </html>
